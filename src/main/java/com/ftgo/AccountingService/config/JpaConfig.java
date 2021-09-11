@@ -20,7 +20,7 @@ import java.util.Properties;
 
 @Configuration
 @EnableTransactionManagement
-@EnableJpaRepositories(basePackages = "com.ftgo.OrderService.domain.order.repository")
+@EnableJpaRepositories(basePackages = "com.ftgo.AccountingService.domain.account.repository")
 public class JpaConfig {
     private final DataSource dataSource;
 
@@ -54,7 +54,7 @@ public class JpaConfig {
         properties.setProperty("hibernate.format_sql", "true");
 
         LocalContainerEntityManagerFactoryBean factory = new LocalContainerEntityManagerFactoryBean();
-        factory.setPackagesToScan("com.ftgo.OrderService.domain.order.entity");
+        factory.setPackagesToScan("com.ftgo.AccountingService.domain.account.entity");
         factory.setJpaProperties(properties);
         factory.setJpaVendorAdapter(adapter);
         factory.setDataSource(dataSource);
