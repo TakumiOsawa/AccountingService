@@ -2,14 +2,12 @@ package com.ftgo.AccountingService.domain.account.entity;
 
 import com.ftgo.AccountingService.domain.Money;
 import lombok.Getter;
-import org.springframework.data.jpa.repository.Query;
 
 import javax.persistence.*;
-import java.util.List;
 import java.util.Random;
 
 @Entity
-@Table(name = "caccounts")
+@Table(name = "accounts")
 @Access(AccessType.FIELD)
 @Getter
 public class Account {

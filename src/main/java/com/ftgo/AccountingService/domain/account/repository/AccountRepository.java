@@ -8,5 +8,5 @@ import java.util.List;
 
 public interface AccountRepository extends CrudRepository<Account, Long> {
     @Query(value = "SELECT * FROM accounts WHERE consumer_id = consumerId", nativeQuery = true)
-    public List<Account> findByConsumerId(long consumerId);
+    List<Account> findByConsumerId(long consumerId);
 }
